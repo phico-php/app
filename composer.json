@@ -1,0 +1,38 @@
+{
+  "name": "phico/app",
+  "description": "An example app layout for Phico",
+  "type": "project",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/phico"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/blade"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/database"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/queue"
+    }
+  ],
+  "require": {
+    "phico/phico": "dev-main",
+    "phico/blade": "dev-main",
+    "phico/database": "dev-main",
+    "phico/mailer": "dev-main",
+    "phico/queue": "dev-main",
+    "phico/session": "dev-main"
+  }
+}
