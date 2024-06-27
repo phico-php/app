@@ -9,7 +9,7 @@
 // handle all non-http errors
 $app->on('error', function ($request, $e) {
 
-    if ($request->isXhr()) {
+    if ($request->isXhr() or $request->accepts('media', 'json')) {
         return response($e->getCode())->json([
             'status' => 'error',
             'message' => 'Sorry an error occured, we will look into it'
