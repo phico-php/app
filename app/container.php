@@ -5,9 +5,6 @@
  *
  */
 
-$container = new \Phico\Container\Container([
-    'autowire' => true,
-    'share' => true
-]);
+$container = new \Phico\Container\Container(config()->get('container'));
 
 return $container;
