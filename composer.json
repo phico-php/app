@@ -1,6 +1,6 @@
 {
   "name": "phico/app",
-  "description": "An example app layout for Phico",
+  "description": "An app layout for Phico with additional optional packages",
   "type": "project",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -34,5 +34,8 @@
     "phico/mailer": "dev-main",
     "phico/queue": "dev-main",
     "phico/session": "dev-main"
+  },
+  "scripts": {
+    "post-create-project-cmd": "./phico init"
   }
 }
