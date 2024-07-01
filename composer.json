@@ -1,6 +1,6 @@
 {
   "name": "phico/app",
-  "description": "An app layout for Phico with additional optional packages",
+  "description": "An app layout for Phico with optional packages",
   "type": "project",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -25,6 +25,10 @@
     {
       "type": "path",
       "url": "/home/dev/phico-php/queue"
+    },
+    {
+      "type": "path",
+      "url": "/home/dev/phico-php/mailer"
     }
   ],
   "require": {
