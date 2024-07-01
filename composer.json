@@ -16,10 +16,6 @@
     },
     {
       "type": "path",
-      "url": "/home/dev/phico-php/blade"
-    },
-    {
-      "type": "path",
       "url": "/home/dev/phico-php/database"
     },
     {
@@ -33,7 +29,6 @@
   ],
   "require": {
     "phico/phico": "dev-main",
-    "phico/blade": "dev-main",
     "phico/database": "dev-main",
     "phico/mailer": "dev-main",
     "phico/queue": "dev-main",
