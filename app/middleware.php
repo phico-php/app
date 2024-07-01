@@ -5,5 +5,7 @@
  * These classes will be called on every request
  */
 
-// $app->use([ new \app\middleware::class ]);
-
+$app->use([
+    new \Phico\Middleware\SecureHeaders,
+    new \Phico\Middleware\TrimInputs,
+]);
