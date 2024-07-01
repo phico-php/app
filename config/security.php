@@ -1,4 +1,3 @@
-security
 <?php
 
 return [
