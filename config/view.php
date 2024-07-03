@@ -8,16 +8,17 @@ return [
 
         'latte' => [
             'cache_path' => env('VIEWS_CACHE_PATH', 'storage/views'),
-            'view_paths' => env('VIEWS_VIEWS_PATH', 'app/Views'),
+            'view_paths' => env('VIEWS_TEMPLATES_PATH', 'app/Views'),
             'namespaces' => [
 
             ],
         ],
 
         'pop' => [
+            'use_cache' => env('VIEWS_USE_CACHE', false),
             'cache_path' => env('VIEWS_CACHE_PATH', 'storage/views'),
-            'view_paths' => env('VIEWS_VIEWS_PATH', 'app/Views'),
-            'namespaces' => [],
+            'view_paths' => env('VIEWS_TEMPLATES_PATH', 'app/Views'),
+            'namespaces' => [
         ],
 
         'plates' => [
@@ -29,16 +30,18 @@ return [
         ],
 
         'rapier' => [
+            'use_cache' => env('VIEWS_USE_CACHE', false),
             'cache_path' => env('VIEWS_CACHE_PATH', 'storage/views'),
-            'view_paths' => env('VIEWS_VIEWS_PATH', 'app/Views'),
+            'view_paths' => env('VIEWS_TEMPLATES_PATH', 'app/Views'),
             'namespaces' => [
 
             ],
         ],
 
         'twig' => [
+            'use_cache' => env('VIEWS_USE_CACHE', false),
             'cache_path' => env('VIEWS_CACHE_PATH', 'storage/views'),
-            'view_paths' => env('VIEWS_VIEWS_PATH', 'app/Views'),
+            'view_paths' => env('VIEWS_TEMPLATES_PATH', 'app/Views'),
             'namespaces' => [
 
             ],
