@@ -5,6 +5,6 @@
  *
  */
 
-$container = new \Phico\Container\Container(config()->get('container'));
+$container = container();
 
 return $container;
