@@ -17,7 +17,7 @@ return [
     ],
 
     'csrf' => [
-        'token_name' => '_csrf_token',
+        'token_name' => '__csrf_token',
     ],
 
     'tokens' => [
