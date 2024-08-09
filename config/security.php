@@ -25,4 +25,20 @@ return [
         ],
     ],
 
+    'sign-in' => [
+        'max_attempts' => 9,
+    ],
+
+    'tokens' => [
+        'csrf' => [
+            'name' => '__csrf_token',
+        ],
+        'reset' => [
+            'ttl' => (24 * 3600)    // 24 hours
+        ],
+        'signup' => [
+            'ttl' => (1 * 3600)     // 1 hour
+        ],
+    ],
+
 ];

@@ -2,8 +2,14 @@
 
 return [
 
+    'use' => env('SESSION_USE', 'files'),
+
+    'ttl' => 12 * 3600,
+
     'cookie' => [
-        'name' => 'ssn',
+
+        'name' => env('SESSION_COOKIE_NAME', 'ses'),
+
         'options' => [
             'expires' => 0,
             'path' => '/',
@@ -14,21 +20,23 @@ return [
             'prefix' => '',
             'encode' => false,
         ],
+
     ],
 
-    'csrf' => [
-        'token_name' => '__csrf_token',
+    'stores' => [
+
+        'files' => [
+            'path' => env('SESSION_FILES_PATH', 'storage/sessions'),
+            'prefix' => env('SESSION_FILES_PREFIX', 'session.'),
+        ],
+
+        'redis' => [
+            'scheme' => env('SESSION_REDIS_SCHEME', 'tcp'),
+            'host' => env('SESSION_REDIS_HOST', '127.0.0.1'),
+            'port' => env('SESSION_REDIS_PORT', 6379),
+            'prefix' => env('SESSION_REDIS_PREFIX', 'session.'),
+        ],
+
     ],
 
-    'tokens' => [
-        'signup' => [
-            'ttl' => (1 * 3600)     // 1 hour
-        ],
-        'reset' => [
-            'ttl' => (24 * 3600)    // 24 hours
-        ],
-        'session' => [
-            'ttl' => (12 * 3600)    // 12 hours
-        ],
-    ],
 ];
