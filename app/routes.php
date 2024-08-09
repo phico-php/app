@@ -6,11 +6,11 @@
  * additional routes files for your modules.
  */
 
-$app->get('/', function ($request) {
+$app->get('*', function ($request) {
 
     return response()->json([
         'status' => 'ok',
-        'message' => 'It works!'
+        'message' => $request->uri->path
     ]);
 
 });
