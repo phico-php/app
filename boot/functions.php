@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Define your app helper functions here.
  *

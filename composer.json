@@ -1,40 +1,57 @@
 {
-  "name": "phico/app",
-  "description": "An app layout for Phico with optional packages",
-  "type": "project",
-  "minimum-stability": "dev",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/"
+    "name": "phico/app",
+    "description": "An app layout for Phico with optional packages",
+    "type": "project",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/phico"
+        },
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/database"
+        },
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/mailer"
+        },
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/queue"
+        },
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/router"
+        },
+        {
+            "type": "path",
+            "url": "/home/dev/phico-php/support"
+        }
+    ],
+    "require": {
+        "phico/phico": "dev-main",
+        "phico/database": "dev-main",
+        "phico/mailer": "dev-main",
+        "phico/query": "dev-main",
+        "phico/queue": "dev-main",
+        "phico/session": "dev-main"
+    },
+    "scripts": {
+        "post-create-project-cmd": "./phico init",
+        "serve": "php -S localhost:8080 -t public &"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "squizlabs/php_codesniffer": "4.0.x-dev"
     }
-  },
-  "repositories": [
-    {
-      "type": "path",
-      "url": "/home/dev/phico-php/phico"
-    },
-    {
-      "type": "path",
-      "url": "/home/dev/phico-php/database"
-    },
-    {
-      "type": "path",
-      "url": "/home/dev/phico-php/queue"
-    },
-    {
-      "type": "path",
-      "url": "/home/dev/phico-php/mailer"
-    }
-  ],
-  "require": {
-    "phico/phico": "dev-main",
-    "phico/database": "dev-main",
-    "phico/mailer": "dev-main",
-    "phico/queue": "dev-main",
-    "phico/session": "dev-main"
-  },
-  "scripts": {
-    "post-create-project-cmd": "./phico init"
-  }
 }

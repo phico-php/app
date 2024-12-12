@@ -1,16 +1,11 @@
 <?php
 
-// boot phico
-require '../boot.php';
+if (isset($_GET['profile'])) {
+    ini_set('xdebug.profiler_enable', '1');
+}
 
-// create the app
-$app = phico();
+// get phico app instance
+$app = require '../boot/phico.php';
 
-// process the app support files
-include path('app/container.php');
-include path('app/events.php');
-include path('app/middleware.php');
-include path('app/routes.php');
-
-// once everything is configured run the application
+// handle the request
 $app->run();
