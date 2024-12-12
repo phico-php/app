@@ -2,3 +2,4 @@
 !/storage/*/.gitkeep
 /vendor/
 .env
+.php-cs-fixer.cache
