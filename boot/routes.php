@@ -14,9 +14,24 @@ $routes = routes();
 
 include path('app/Welcome/routes.php');
 
+// an example showing route and query parameters
+$routes->get('/hello/{name}', function ($request) {
+    return response()->json([
+        'status' => 'ok',
+        'message' => sprintf('Hello %s', $request->route()->param('name')),
+    ]);
+});
+// an example catchall route
 $routes->get('*', function (Request $request) {
     return response(404)->json([
         'status' => 'not found',
-        'message' => $request->uri()->path()
+        'path' => $request->uri()->path(),
+        'uri' => [
+            'params' => $request->uri()->params(),
+            'segments' => $request->uri()->segments(),
+        ],
+        'route' => [
+            'params' => $request->route()->params(),
+        ],
     ]);
 });
