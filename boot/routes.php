@@ -15,8 +15,8 @@ $routes = routes();
 include path('app/Welcome/routes.php');
 
 $routes->get('*', function (Request $request) {
-    return response()->json([
-        'status' => 'ok',
+    return response(404)->json([
+        'status' => 'not found',
         'message' => $request->uri()->path()
     ]);
 });
